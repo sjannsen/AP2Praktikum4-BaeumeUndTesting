@@ -7,15 +7,6 @@ sealed class Tree {  //sealed, Ableitungen dieser Klasse müssen in dieser Datei 
     abstract fun contains(value: Int): Boolean
     abstract fun addSorted(value: Int): Tree // Muss einen neuen Baum zurückgeben, da left und richt val sind
 
-  /*  fun processNode() {
-        when (this) {
-            is EmptyTree -> {
-            }
-            is DataNode -> {
-                println("${this.data}")
-            }
-        }
-    }*/
 
     fun processNode(f: (value: Int) -> Unit) {
         when (this) {

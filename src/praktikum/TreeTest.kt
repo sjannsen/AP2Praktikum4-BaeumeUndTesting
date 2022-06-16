@@ -5,11 +5,6 @@ import org.junit.jupiter.api.Test
 
 internal class TreeTest {
 
-    @Test
-    fun `when server error expect post not cached`() {
-        //your test
-    }
-
     @Test // Nach dem Übungsblatt, Programmierstil??
     fun `an EmptyTree should be empty`() {
         val tree = emptyTree<Int>()

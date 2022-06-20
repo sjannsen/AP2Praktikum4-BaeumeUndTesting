@@ -2,25 +2,6 @@ package praktikum
 import java.lang.Integer.max
 
 
-//addValue() https://stackoverflow.com/questions/72516454/kotlin-call-of-a-function
-//depth() https://stackoverflow.com/questions/72514614/depth-of-a-binary-tree-in-kotlin
-
-/* Depth()
-* Of course, there are many different ways to implement even a simple binary tree, with different
-* performance characteristics. For example, if checking the height was going to be a very common
-* operation, then each node could have a field with the height of its subtree it would take a little
-* extra memory to store that, and some extra work to maintain it, but checking the height would then
-* be a constant-time operation. As always, it helps to understand a bit about the processing so
-*  you can pick the most appropriate implementation
-* */
-
-/*call of addValue()
-* Note: passing the comparator function as argument to add is rather bad design
-* (especially because this function is public), because the comparator can be different
-* for each call adding elements to the tree. It should instead be a property of the tree
-* itself, otherwise the tree could become inconsistent.
-* */
-
 sealed class Tree<A> {
      fun isEmpty(): Boolean {
          return when(this) {
